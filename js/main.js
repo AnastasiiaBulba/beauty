@@ -11,7 +11,7 @@ function loadPartial(id, url, callback) {
 function createMobileMenu() {
   // Додаємо модальне меню, якщо його ще немає
   if (!document.getElementById("mobile-menu-modal")) {
-    fetch("partials/mobile-menu.html")
+    fetch("components/mobile-menu.html")
       .then((res) => res.text())
       .then((html) => {
         document.body.insertAdjacentHTML("beforeend", html);
@@ -106,10 +106,10 @@ function enableSmoothScrollAnchors() {
 // Завантаження header/footer, мобільне меню, плавна прокрутка, рік у футері, cookie-banner
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadPartial("header", "partials/header.html", function () {
+  loadPartial("header", "components/header.html", function () {
     createMobileMenu();
     enableSmoothScrollAnchors();
   });
-  loadPartial("footer", "partials/footer.html");
+  loadPartial("footer", "components/footer.html");
   // footer-year.js і cookie-banner.js самі підписані на DOMContentLoaded
 });
