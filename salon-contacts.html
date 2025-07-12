@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>domain.com – Salon Contacts</title>
+    <meta
+      name="description"
+      content="Contact Hair Salon: Beauty Salon for support, feedback, or partnership inquiries. Located in the heart of Sydney, Australia."
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon512.jpg" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/salon-contacts.css" />
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("contacts-form");
+        var success = document.getElementById("form-success");
+        var nameInput = form.querySelector('input[name="name"]');
+        var phoneInput = form.querySelector('input[name="phone"]');
+
+        // Name validation - only letters and spaces
+        nameInput.addEventListener("input", function () {
+          var value = this.value;
+          var lettersOnly = value.replace(/[^A-Za-z\s]/g, "");
+          if (value !== lettersOnly) {
+            this.value = lettersOnly;
+          }
+        });
+
+        // Phone validation - only numbers, spaces, +, -, and parentheses
+        phoneInput.addEventListener("input", function () {
+          var value = this.value;
+          var validChars = value.replace(/[^0-9\s\+\-\(\)]/g, "");
+          if (value !== validChars) {
+            this.value = validChars;
+          }
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Additional validation before submission
+          var name = nameInput.value.trim();
+          var phone = phoneInput.value.trim();
+
+          if (name.length < 2) {
+            alert("Please enter a valid name (at least 2 characters)");
+            nameInput.focus();
+            return;
+          }
+
+          if (phone.length < 5) {
+            alert("Please enter a valid phone number (at least 5 characters)");
+            phoneInput.focus();
+            return;
+          }
+
+          form.reset();
+          success.style.display = "block";
+          setTimeout(() => {
+            success.style.display = "none";
+          }, 3500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="container">
+      <div class="page-section">
+        <section class="contacts-section">
+          <div class="contacts-form-block">
+            <h2 class="contacts-title">Send Us a Message</h2>
+            <form class="contacts-form" id="contacts-form" autocomplete="off">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                pattern="[A-Za-z\s]+"
+                title="Please enter only letters and spaces"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                pattern="[0-9\s\+\-\(\)]+"
+                title="Please enter only numbers, spaces, +, -, and parentheses"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="How can we help you?"
+                rows="4"
+                required
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+            <div class="form-success" id="form-success">
+              Thank you! Our beauty team will contact you soon.
+            </div>
+          </div>
+          <div class="contacts-info">
+            <div class="contacts-details">
+              <h2 class="contacts-title">Contact Our Beauty Salon Team</h2>
+              <ul class="contacts-list">
+                <li>
+                  <strong>Email:</strong>
+                  <a href="mailto:contact@domain.com">contact@domain.com</a>
+                </li>
+                <li>
+                  <strong>Phone:</strong>
+                  <a href="tel:+61293672845">+61 2 9367 2845</a>
+                </li>
+                <li>
+                  <strong>Address:</strong>
+                  456 Oxford Street, Paddington NSW 2021, Australia
+                </li>
+              </ul>
+            </div>
+            <div class="contacts-map-block">
+              <div class="address-block">
+                <h3 class="address-title">Our Location</h3>
+                <p class="address-text">
+                  456 Oxford Street, Paddington NSW 2021, Australia
+                </p>
+              </div>
+              <iframe
+                class="contacts-map"
+                src="https://www.google.com/maps?q=456+Oxford+Street,+Paddington+NSW+2021,+Australia&output=embed&hl=en"
+                title="Sydney, Australia map"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="footer"></div>
+  </body>
+</html>

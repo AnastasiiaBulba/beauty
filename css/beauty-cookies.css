@@ -1,0 +1,66 @@
+/* Styles for Cookies Policy page */
+.policy-section {
+  background: linear-gradient(
+    135deg,
+    var(--color-hero1) 0%,
+    var(--color-white) 100%
+  );
+  border-radius: var(--radius-main);
+  box-shadow: 0 2px 12px var(--color-shadow);
+  margin: 2.5rem auto;
+  padding: 2.2rem 1.2rem 2.5rem 1.2rem;
+  animation: heroFadeIn 0.7s;
+  max-width: 700px;
+}
+.policy-title,
+.policy-section h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px var(--color-tile);
+}
+.policy-section h2 {
+  color: var(--color-accent);
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+.policy-section a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color var(--transition-main);
+}
+.policy-section a:hover {
+  color: var(--color-primary);
+}
+.policy-text,
+.policy-section p,
+.policy-section ul,
+.policy-section li {
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+@media (min-width: 768px) {
+  .policy-section {
+    padding: 2.8rem 2.5rem 3rem 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .policy-section {
+    padding: 3.2rem 3.5rem 3.5rem 3.5rem;
+  }
+}
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

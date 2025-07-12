@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>domain.com – Beauty News</title>
+    <meta
+      name="description"
+      content="Stay updated with the latest beauty trends and salon news from Hair Salon: Beauty Salon game. Discover new hairstyles, makeup techniques, and salon updates!"
+    />
+    <meta
+      name="keywords"
+      content="Beauty News, Hair Salon, Makeup Trends, Hairstyles, Salon Updates"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon512.jpg" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/beauty-news.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="container">
+      <div class="page-section">
+        <section class="news-section" id="salon-updates-section">
+          <h2 class="news-title">Salon Updates</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-item-title">New Hairstyles Added!</div>
+              <div class="news-item-short">
+                Discover 15 brand new trendy hairstyles with stunning
+                accessories and makeup options.
+              </div>
+              <button class="read-more-btn">Read more</button>
+              <div class="news-item-full" style="display: none">
+                We're excited to announce the release of 15 brand new hairstyles
+                in Hair Salon: Beauty Salon! Each style introduces unique
+                cutting techniques, new hair colors, and vibrant accessories
+                that will test your styling skills like never before. Prepare
+                for fresh customer requests, clever styling challenges, and
+                strategic beauty planning. Can you master all the new looks and
+                create the perfect style for every customer? Jump in and see how
+                beautiful you can make them!
+                <img
+                  src="img/new.jpg"
+                  alt="New hairstyles"
+                  class="news-item-img"
+                  style="
+                    display: block;
+                    margin: 1.2em auto 0 auto;
+                    max-width: 180px;
+                    border-radius: 16px;
+                    box-shadow: 0 2px 12px #0002;
+                  "
+                />
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-item-title">Enhanced Beauty Tools</div>
+              <div class="news-item-short">
+                Improved styling tools and faster service times for all
+                customers.
+              </div>
+              <button class="read-more-btn">Read more</button>
+              <div class="news-item-full" style="display: none">
+                Thanks to valuable feedback from our amazing stylists, we've
+                optimized Hair Salon: Beauty Salon to run even smoother across
+                phones, tablets, and desktops. Whether you're on an older device
+                or the latest model, enjoy lightning-fast styling, seamless hair
+                animations, and reduced loading times. Your salon experience is
+                now more fluid and responsive, letting you focus on perfecting
+                your beauty skills without distractions.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="news-section" id="beauty-tips-section">
+          <h2 class="news-title">Beauty Tips</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-item-title">
+                My First Perfect Style — How I achieved 100% customer
+                satisfaction
+              </div>
+              <div class="news-item-short">
+                Achieving perfect customer satisfaction felt like an impossible
+                dream — until it happened!
+              </div>
+              <button class="read-more-btn">Read more</button>
+              <div class="news-item-full" style="display: none">
+                In this beauty diary entry, I share the exact styling techniques
+                I used, how I managed customer preferences, and the key moments
+                where I created perfect looks to keep my salon rating high.
+                Whether you're a beginner stylist or looking to improve your
+                customer satisfaction, these insights will help you think ahead
+                and make smarter styling choices. Get ready to create more
+                beautiful looks than ever!
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-item-title">Style Mastery</div>
+              <div class="news-item-short">
+                Top tips and tricks for creating the perfect hairstyle every
+                time.
+              </div>
+              <button class="read-more-btn">Read more</button>
+              <div class="news-item-full" style="display: none">
+                Creating beautiful hairstyles is the heart of Hair Salon: Beauty
+                Salon. After dozens of hours styling and experimenting, I've
+                uncovered some essential tips for new and experienced stylists
+                alike:<br /><br />
+                <ul>
+                  <li>
+                    Always wash and condition hair before styling for the best
+                    results.
+                  </li>
+                  <li>
+                    Look at customer preferences to choose the most flattering
+                    style.
+                  </li>
+                  <li>
+                    Use accessories to complement the hairstyle and complete the
+                    look.
+                  </li>
+                  <li>
+                    Practice timing to serve customers efficiently and avoid
+                    delays.
+                  </li>
+                </ul>
+                Master these techniques, and you'll be unstoppable on your way
+                to becoming the top stylist!
+                <img
+                  src="img/new2.jpg"
+                  alt="Style mastery"
+                  class="news-item-img"
+                  style="
+                    display: block;
+                    margin: 1.2em auto 0 auto;
+                    max-width: 180px;
+                    border-radius: 16px;
+                    box-shadow: 0 2px 12px #0002;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="footer"></div>
+    </main>
+    <script src="js/main.js"></script>
+    <script>
+      document.querySelectorAll(".news-section").forEach((section) => {
+        section.addEventListener("click", function (e) {
+          if (e.target.classList.contains("read-more-btn")) {
+            const item = e.target.closest(".news-item");
+            const full = item.querySelector(".news-item-full");
+            if (full.style.display === "none") {
+              full.style.display = "block";
+              e.target.textContent = "Show less";
+            } else {
+              full.style.display = "none";
+              e.target.textContent = "Read more";
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

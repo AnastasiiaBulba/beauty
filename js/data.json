@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "title": "Hair Salon: Beauty Salon",
+    "subtitle": "Unleash your inner hairstylist and create stunning looks in the most charming beauty salon simulation game!"
+  },
+  "features": [
+    "Adorable customers with unique personalities",
+    "Hundreds of hairstyles and accessories",
+    "Luxurious jewelry and makeup options",
+    "Relaxing and satisfying gameplay",
+    "Perfect for all ages and skill levels!"
+  ],
+  "howToPlay": {
+    "controls": [
+      "Wash and condition customer hair",
+      "Style hair with various techniques",
+      "Add jewelry and makeup accessories"
+    ],
+    "tips": [
+      "Match styles to customer preferences",
+      "Use accessories to complete the look",
+      "The happier the customer, the better your rating!"
+    ]
+  },
+  "beautyServices": {
+    "title": "Beauty Services",
+    "description": "Transform your customers with a wide range of beauty services! From classic cuts to trendy styles, luxurious jewelry to glamorous makeup, every service helps you build your reputation as the best salon in town."
+  },
+  "reviews": [
+    {
+      "user": "Sarah",
+      "text": "Absolutely adorable! My daughter loves styling hair and the customers are so cute. Perfect for creative minds!"
+    },
+    {
+      "user": "Emma",
+      "text": "So relaxing and fun! I love creating different looks and the jewelry options are beautiful."
+    },
+    {
+      "user": "Lisa",
+      "text": "Charming graphics and smooth gameplay. The variety of hairstyles keeps me entertained for hours!"
+    }
+  ],
+  "news": {
+    "updates": [
+      {
+        "title": "New Hairstyles Added!",
+        "short": "Discover 15 brand new trendy hairstyles with stunning accessories.",
+        "full": "We're excited to announce the release of 15 brand new hairstyles in Hair Salon: Beauty Salon! Each style introduces unique cutting techniques, new hair colors, and vibrant accessories that will test your styling skills like never before."
+      },
+      {
+        "title": "Enhanced Beauty Tools",
+        "short": "Improved styling tools and faster service times.",
+        "full": "Thanks to valuable feedback from our amazing stylists, we've optimized Hair Salon: Beauty Salon to run even smoother across phones, tablets, and desktops. Enjoy lightning-fast styling and seamless hair animations!"
+      }
+    ],
+    "diaries": [
+      {
+        "title": "My First Perfect Style",
+        "short": "How I achieved 100% customer satisfaction.",
+        "full": "Achieving perfect customer satisfaction felt like an impossible dream — until it happened! Here's how I managed customer preferences and created perfect looks."
+      },
+      {
+        "title": "Style Mastery",
+        "short": "Tips for creating the perfect hairstyle every time.",
+        "full": "Creating beautiful hairstyles is the heart of Hair Salon: Beauty Salon. After dozens of hours styling, I've uncovered some essential tips for new and experienced stylists alike!"
+      }
+    ]
+  }
+}
