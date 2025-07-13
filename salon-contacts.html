@@ -22,12 +22,13 @@
         var nameInput = form.querySelector('input[name="name"]');
         var phoneInput = form.querySelector('input[name="phone"]');
 
-        // Name validation - only letters and spaces
+        // Name validation - allow any characters for international names
         nameInput.addEventListener("input", function () {
           var value = this.value;
-          var lettersOnly = value.replace(/[^A-Za-z\s]/g, "");
-          if (value !== lettersOnly) {
-            this.value = lettersOnly;
+          // Allow any characters except potentially harmful ones
+          var validName = value.replace(/[<>\"&]/g, "");
+          if (value !== validName) {
+            this.value = validName;
           }
         });
 
@@ -79,9 +80,8 @@
               <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
-                pattern="[A-Za-z\s]+"
-                title="Please enter only letters and spaces"
+                placeholder="Your Name (any language supported)"
+                title="Enter your name in any language"
                 required
               />
               <input
@@ -94,7 +94,7 @@
               />
               <textarea
                 name="message"
-                placeholder="How can we help you?"
+                placeholder="How can we help you? (any language supported)"
                 rows="4"
                 required
               ></textarea>
